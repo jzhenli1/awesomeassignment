@@ -39,5 +39,5 @@ tlearner <- function(X_train, W_train, Y_train, X_test) {
   # Predicting CATE in test sample
   cate_tl <- predict(rfm1, X_test)$predictions - predict(rfm0, X_test)$predictions
 
-  return(c(cate_tl, rfm1, rfm0))
+  return(list(cate_tl, rfm1, rfm0))
 }
