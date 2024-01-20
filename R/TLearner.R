@@ -18,6 +18,10 @@
 #' @param X_test A vector or matrix of the covariates in test sample.
 #'
 #' @return A list of numeric values of CATE predictions in test sample.
+#'
+#' @importFrom stats predict
+#' @importFrom grf regression_forest
+#'
 #' @export
 #'
 #' @examples
