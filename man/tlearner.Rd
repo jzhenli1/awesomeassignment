@@ -16,7 +16,7 @@ tlearner(X_train, W_train, Y_train, X_test)
 \item{X_test}{A vector or matrix of the covariates in test sample.}
 }
 \value{
-A list of numeric values of CATE predictions in test sample.
+A vector of numeric values of CATE predictions in test sample.
 }
 \description{
 This function predicts the CATE using the T-Learner.
