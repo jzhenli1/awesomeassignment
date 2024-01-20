@@ -17,7 +17,9 @@
 #' @param Y_train A vector of the outcomes in training sample.
 #' @param X_test A vector or matrix of the covariates in test sample.
 #'
-#' @return A vector of numeric values of CATE predictions in test sample.
+#' @return A list containing a vector numeric values of CATE predictions in test sample,
+#' a regression forest model fitted on the treated in training sample, and a regression
+#' forest model fitted on the controlled in training sample
 #'
 #' @importFrom stats predict
 #' @importFrom grf regression_forest
@@ -37,5 +39,5 @@ tlearner <- function(X_train, W_train, Y_train, X_test) {
   # Predicting CATE in test sample
   cate_tl <- predict(rfm1, X_test)$predictions - predict(rfm0, X_test)$predictions
 
-  return(cate_tl)
+  return(c(cate_tl, rfm1, rfm0))
 }

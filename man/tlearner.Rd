@@ -16,7 +16,9 @@ tlearner(X_train, W_train, Y_train, X_test)
 \item{X_test}{A vector or matrix of the covariates in test sample.}
 }
 \value{
-A vector of numeric values of CATE predictions in test sample.
+A list containing a vector numeric values of CATE predictions in test sample,
+a regression forest model fitted on the treated in training sample, and a regression
+forest model fitted on the controlled in training sample
 }
 \description{
 This function predicts the CATE using the T-Learner.
