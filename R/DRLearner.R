@@ -15,7 +15,8 @@
 #' @param Y_tilde A vector of the pseudo-outcomes in training sample.
 #' @param X_test A vector or matrix of the covariates in test sample.
 #'
-#' @return A vector of numeric values of CATE predictions in test sample.
+#' @return A list containing a vector of numeric values of CATE predictions in test sample,
+#' and a fitted weighted regression tree model.
 #'
 #' @importFrom stats predict
 #' @importFrom grf regression_forest
@@ -34,5 +35,5 @@ drlearner <- function(X_train, Y_tilde, X_test) {
   # Predicting CATE in test sample
   cate_drl <- predict(rf_drl, X_test)$predictions
 
-  return(cate_drl)
+  return(list(cate = cate_drl, rf = rf_drl))
 }

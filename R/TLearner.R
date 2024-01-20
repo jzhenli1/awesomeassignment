@@ -17,7 +17,7 @@
 #' @param Y_train A vector of the outcomes in training sample.
 #' @param X_test A vector or matrix of the covariates in test sample.
 #'
-#' @return A list containing a vector numeric values of CATE predictions in test sample,
+#' @return A list containing a vector of numeric values of CATE predictions in test sample,
 #' a regression forest model fitted on the treated in training sample, and a regression
 #' forest model fitted on the controlled in training sample
 #'

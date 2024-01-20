@@ -14,7 +14,8 @@ drlearner(X_train, Y_tilde, X_test)
 \item{X_test}{A vector or matrix of the covariates in test sample.}
 }
 \value{
-A vector of numeric values of CATE predictions in test sample.
+A list containing a vector of numeric values of CATE predictions in test sample,
+and a fitted weighted regression tree model.
 }
 \description{
 This function predicts the CATE using the DR-Learner.

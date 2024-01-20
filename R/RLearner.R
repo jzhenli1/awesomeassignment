@@ -18,7 +18,8 @@
 #' @param mhat A vector of estimates of the conditional expectation of the outcome (nuisance parameter)
 #' @param ehat A vector of estimates of the conditional expectation of the treatment; estimated propensity score (nuisance parameter)
 #'
-#' @return A vector of numeric values of CATE predictions in test sample.
+#' @return A list containing a vector of numeric values of CATE predictions in test sample,
+#' and a fitted weighted regression tree model.
 #'
 #' @importFrom stats predict
 #' @importFrom grf regression_forest
@@ -47,5 +48,5 @@ rlearner <- function(X_train, W_train, Y_train, X_test, mhat, ehat) {
   # Predicting CATE on test sample
   cate_rl <- predict(rf_rl, X_test)$predictions
 
-  return(cate_rl)
+  return(list(cate = cate_rl, rf = ref_rl))
 }

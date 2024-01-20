@@ -20,7 +20,8 @@ rlearner(X_train, W_train, Y_train, X_test, mhat, ehat)
 \item{ehat}{A vector of estimates of the conditional expectation of the treatment; estimated propensity score (nuisance parameter)}
 }
 \value{
-A vector of numeric values of CATE predictions in test sample.
+A list containing a vector of numeric values of CATE predictions in test sample,
+and a fitted weighted regression tree model.
 }
 \description{
 This function predicts the CATE using the R-Learner.
