@@ -48,5 +48,5 @@ rlearner <- function(X_train, W_train, Y_train, X_test, mhat, ehat) {
   # Predicting CATE on test sample
   cate_rl <- predict(rf_rl, X_test)$predictions
 
-  return(list(cate = cate_rl, rf = ref_rl))
+  return(list(cate = cate_rl, rf = rf_rl))
 }
