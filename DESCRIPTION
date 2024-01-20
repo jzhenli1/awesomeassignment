@@ -4,7 +4,9 @@ Title: Application of Causal Machine Learning Methods
 Version: 0.1.0
 Author: Jiazhen Li
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: The package contains functions that implements methods in Causal ML. More specifically, it applies the T-Learner, the R-Learner, and the DR-Learner (the latter two in a (weighted) regression forest setting)
+Description: The package contains functions that implements methods in Causal ML.
+    More specifically, it applies the T-Learner, the R-Learner, and the DR-Learner
+    (the latter two in a (weighted) regression forest setting)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
