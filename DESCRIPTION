@@ -13,4 +13,5 @@ LazyData: true
 RoxygenNote: 7.2.3
 Imports: 
     grf,
-    stats
+    stats,
+    ggplot2
