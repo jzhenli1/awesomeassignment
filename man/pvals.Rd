@@ -4,12 +4,14 @@
 \alias{pvals}
 \title{Extract p-values}
 \usage{
-pvals(model, col_name)
+pvals(model, col_name, rownames = rownames)
 }
 \arguments{
 \item{model}{An `evaluCATE` object/model considered}
 
 \item{col_name}{A string object of how the column of p-values should be called}
+
+\item{rownames}{A list of row names to be plotted (from the evaluCATE package)}
 }
 \value{
 A vector of p-values
@@ -20,5 +22,5 @@ Extract p-values from the GATE results of the `evaluCATE` package.
 The p-values extracted are specifically of the hypothesis test \eqn{H_0: \ \gamma_k = \gamma_1}
 }
 \examples{
-pvals(evaluation_tl, "tl_pval")
+pvals(evaluation_tl, "tl_pval", rownames)
 }

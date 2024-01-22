@@ -7,14 +7,15 @@
 #'
 #' @param model An `evaluCATE` object/model considered
 #' @param col_name A string object of how the column of p-values should be called
+#' @param rownames A list of row names to be plotted (from the evaluCATE package)
 #'
 #' @return A vector of p-values
 #' @export
 #'
 #' @examples
-#' pvals(evaluation_tl, "tl_pval")
+#' pvals(evaluation_tl, "tl_pval", rownames)
 
-pvals <- function(model, col_name) {
+pvals <- function(model, col_name, rownames=rownames) {
   # Initialize a matrix to store the results
   pval_mat <- matrix(NA, nrow = length(rownames), ncol = 1)
   rownames(pval_mat) <- rownames
