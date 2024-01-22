@@ -71,7 +71,7 @@ loop_helper <- function(seeds) {
 
     cf_gatevar_plots[[i]] <- cf_gatevar
 
-    cf_pval <- pvals(evaluation_cf, paste0("Seed=", seeds[i]))
+    cf_pval <- pvals(evaluation_cfvar, paste0("Seed=", seeds[i]))
     combined_pvals_list[[i]] <- cf_pval
   }
 
