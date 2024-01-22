@@ -48,5 +48,5 @@ A grid of plots
 Helper function to run a loop over several seeds to explore the variability of CATE estimates.
 }
 \examples{
-loop_helper(seeds = c(1, 2, 3), "Split 20:80")
+loop_helper(seeds = c(1, 2, 3), "Split 20:80", X, Y, W, X_train, Y_train, W_train, X_test, indices, propensity_score)
 }
