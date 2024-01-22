@@ -5,6 +5,15 @@
 #'
 #' @param seeds A list of seeds to loop over
 #' @param split A string vector for the train/test split fraction - as title for graph outputs
+#' @param X A vector or a matrix of the covariates in the whole sample
+#' @param Y A vector of the outcomes in the whole sample.
+#' @param W A vector of the treatment indicator in the whole sample.
+#' @param X_train A vector or a matrix of the covariates in training sample.
+#' @param W_train A vector of the treatment indicator in training sample.
+#' @param Y_train A vector of the outcomes in training sample.
+#' @param X_test A vector or matrix of the covariates in test sample.
+#' @param indices A vector of indices for sampling the training and test samples.
+#' @param propensity_score A vector of propensity scores
 #'
 #' @return A grid of plots
 #'
@@ -19,9 +28,11 @@
 #' @export
 #'
 #' @examples
-#' loop_helper(seeds = c(1, 2, 3))
+#' loop_helper(seeds = c(1, 2, 3), "Split 20:80")
 
-loop_helper <- function(seeds, split) {
+loop_helper <- function(seeds, split, X=X, Y=Y, W=W, X_train=X_train,
+                        Y_train=Y_train, W_train=W_train, X_test=X_test,
+                        indices=indices, propensity_score=propensity_score) {
 
   # Initialize empty lists to store plots and matrices
   hist_plots <- list()

@@ -4,12 +4,42 @@
 \alias{loop_helper}
 \title{Helper function for Loops}
 \usage{
-loop_helper(seeds, split)
+loop_helper(
+  seeds,
+  split,
+  X = X,
+  Y = Y,
+  W = W,
+  X_train = X_train,
+  Y_train = Y_train,
+  W_train = W_train,
+  X_test = X_test,
+  indices = indices,
+  propensity_score = propensity_score
+)
 }
 \arguments{
 \item{seeds}{A list of seeds to loop over}
 
 \item{split}{A string vector for the train/test split fraction - as title for graph outputs}
+
+\item{X}{A vector or a matrix of the covariates in the whole sample}
+
+\item{Y}{A vector of the outcomes in the whole sample.}
+
+\item{W}{A vector of the treatment indicator in the whole sample.}
+
+\item{X_train}{A vector or a matrix of the covariates in training sample.}
+
+\item{Y_train}{A vector of the outcomes in training sample.}
+
+\item{W_train}{A vector of the treatment indicator in training sample.}
+
+\item{X_test}{A vector or matrix of the covariates in test sample.}
+
+\item{indices}{A vector of indices for sampling the training and test samples.}
+
+\item{propensity_score}{A vector of propensity scores}
 }
 \value{
 A grid of plots
@@ -18,5 +48,5 @@ A grid of plots
 Helper function to run a loop over several seeds to explore the variability of CATE estimates.
 }
 \examples{
-loop_helper(seeds = c(1, 2, 3))
+loop_helper(seeds = c(1, 2, 3), "Split 20:80")
 }

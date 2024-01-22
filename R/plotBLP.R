@@ -2,6 +2,7 @@
 #'
 #' @param model An `evaluCATE` object
 #' @param name A string of the plot title
+#' @param rownames A list of row names to be plotted (from the `evaluCATE` package)
 #'
 #' @return A plot of the \eqn{\beta_2} estimates of BLP
 #'
@@ -12,10 +13,7 @@
 #' @examples
 #' BLP_plot(evaluation_tl, "T-Learner RF")
 
-BLP_plot <- function(model, name) {
-  # Define the row names
-  rownames <- c("wr_none", "wr_cddf1", "wr_cddf2", "wr_mck1", "ht_none",
-                "ht_cddf1", "ht_cddf2", "ht_mck1", "ht_mck2", "ht_mck3", "aipw")
+BLP_plot <- function(model, name, rownames=rownames) {
 
   # Initialize a matrix to store the results
   results <- matrix(NA, nrow = length(rownames), ncol = 3)
