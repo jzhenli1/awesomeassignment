@@ -2,8 +2,12 @@
 
 export(BLP_plot)
 export(drlearner)
+export(loop_helper)
 export(rlearner)
 export(tlearner)
+import(evaluCATE)
 import(ggplot2)
+importFrom(cowplot,plot_grid)
+importFrom(grf,causal_forest)
 importFrom(grf,regression_forest)
 importFrom(stats,predict)
