@@ -4,6 +4,7 @@
 #' Helper function to run a loop over several seeds to explore the variability of CATE estimates.
 #'
 #' @param seeds A list of seeds to loop over
+#' @param split A string vector for the train/test split fraction - as title for graph outputs
 #'
 #' @return A grid of plots
 #'
@@ -20,7 +21,7 @@
 #' @examples
 #' loop_helper(seeds = c(1, 2, 3))
 
-loop_helper <- function(seeds) {
+loop_helper <- function(seeds, split) {
 
   # Initialize empty lists to store plots and matrices
   hist_plots <- list()
@@ -63,11 +64,11 @@ loop_helper <- function(seeds) {
 
     # Using helper function from my package to plot BLP
     plot_cfvar <- awesomeassignment::BLP_plot(evaluation_cfvar,
-                                              paste0("Seed=", seeds[i], ", Split 30:70"))
+                                              paste0("Seed=", seeds[i], ", ", split))
     plot_cfvar_plots[[i]] <- plot_cfvar
 
     cf_gatevar <- plot(evaluation_cfvar, target = "GATES") +
-      ggtitle(paste0("Seed=", i, ", Split 30:70"))
+      ggtitle(paste0("Seed=", seeds[i], ", ", split))
 
     cf_gatevar_plots[[i]] <- cf_gatevar
 

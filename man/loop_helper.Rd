@@ -4,10 +4,12 @@
 \alias{loop_helper}
 \title{Helper function for Loops}
 \usage{
-loop_helper(seeds)
+loop_helper(seeds, split)
 }
 \arguments{
 \item{seeds}{A list of seeds to loop over}
+
+\item{split}{A string vector for the train/test split fraction - as title for graph outputs}
 }
 \value{
 A grid of plots
