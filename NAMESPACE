@@ -3,6 +3,7 @@
 export(BLP_plot)
 export(drlearner)
 export(loop_helper)
+export(pvals)
 export(rlearner)
 export(tlearner)
 import(evaluCATE)
