@@ -46,7 +46,7 @@ loop_helper <- function(seeds, split) {
       geom_vline(xintercept = mean(cate_cfvar), color = "red", linewidth = 1) +
       geom_text(aes(x = mean(cate_cfvar), y = 1000, label = paste("Mean CATE:", round(mean(cate_cfvar), 6))),
                 vjust = 2, hjust = 1.2, color = "red", size = 2.5) +
-      labs(title = paste0("Seed=", i, ", Split 30:70"), x = "CATE", y = "Frequency")
+      labs(title = paste0("Seed=", seeds[i], ", ", split), x = "CATE", y = "Frequency")
 
     hist_plots[[i]] <- hist
 
