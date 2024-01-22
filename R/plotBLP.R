@@ -11,7 +11,7 @@
 #' @export
 #'
 #' @examples
-#' BLP_plot(evaluation_tl, "T-Learner RF")
+#' BLP_plot(evaluation_tl, "T-Learner RF", rownames)
 
 BLP_plot <- function(model, name, rownames=rownames) {
 

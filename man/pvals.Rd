@@ -22,5 +22,9 @@ Extract p-values from the GATE results of the `evaluCATE` package.
 The p-values extracted are specifically of the hypothesis test \eqn{H_0: \ \gamma_k = \gamma_1}
 }
 \examples{
+<<<<<<< HEAD
 pvals(evaluation_tl, "tl_pval")
+=======
+pvals(evaluation_tl, "tl_pval", rownames)
+>>>>>>> c941d24b6339ec01b8d1031e9062fb9973d0a29f
 }

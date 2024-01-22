@@ -13,7 +13,11 @@
 #' @export
 #'
 #' @examples
+<<<<<<< HEAD
 #' pvals(evaluation_tl, "tl_pval")
+=======
+#' pvals(evaluation_tl, "tl_pval", rownames)
+>>>>>>> c941d24b6339ec01b8d1031e9062fb9973d0a29f
 
 pvals <- function(model, col_name, rownames=rownames) {
   # Initialize a matrix to store the results

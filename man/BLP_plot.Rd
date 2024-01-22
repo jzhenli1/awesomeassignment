@@ -20,5 +20,5 @@ A plot of the \eqn{\beta_2} estimates of BLP
 Plot the \eqn{\beta_2} estimates of the Best Linear Predictor
 }
 \examples{
-BLP_plot(evaluation_tl, "T-Learner RF")
+BLP_plot(evaluation_tl, "T-Learner RF", rownames)
 }
