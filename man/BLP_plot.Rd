@@ -4,14 +4,12 @@
 \alias{BLP_plot}
 \title{Plot the \eqn{\beta_2} estimates of the Best Linear Predictor}
 \usage{
-BLP_plot(model, name, rownames = rownames)
+BLP_plot(model, name)
 }
 \arguments{
 \item{model}{An `evaluCATE` object}
 
 \item{name}{A string of the plot title}
-
-\item{rownames}{A list of row names to be plotted (from the `evaluCATE` package)}
 }
 \value{
 A plot of the \eqn{\beta_2} estimates of BLP
@@ -20,5 +18,5 @@ A plot of the \eqn{\beta_2} estimates of BLP
 Plot the \eqn{\beta_2} estimates of the Best Linear Predictor
 }
 \examples{
-BLP_plot(evaluation_tl, "T-Learner RF", rownames)
+BLP_plot(evaluation_tl, "T-Learner RF")
 }

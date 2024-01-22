@@ -28,11 +28,8 @@
 #' @export
 #'
 #' @examples
-<<<<<<< HEAD
-#' loop_helper(seeds = c(1, 2, 3), "Split 20:80")
-=======
-#' loop_helper(seeds = c(1, 2, 3), "Split 20:80", X, Y, W, X_train, Y_train, W_train, X_test, indices, propensity_score)
->>>>>>> c941d24b6339ec01b8d1031e9062fb9973d0a29f
+#' loop_helper(seeds = c(1, 2, 3), "Split 20:80", X, Y, W, X_train, Y_train,
+#' W_train, X_test, indices, propensity_score)
 
 loop_helper <- function(seeds, split, X=X, Y=Y, W=W, X_train=X_train,
                         Y_train=Y_train, W_train=W_train, X_test=X_test,
@@ -79,7 +76,7 @@ loop_helper <- function(seeds, split, X=X, Y=Y, W=W, X_train=X_train,
 
     # Using helper function from my package to plot BLP
     plot_cfvar <- awesomeassignment::BLP_plot(evaluation_cfvar,
-                                              paste0("Seed=", seeds[i], ", ", split), rownames)
+                                              paste0("Seed=", seeds[i], ", ", split))
     plot_cfvar_plots[[i]] <- plot_cfvar
 
     cf_gatevar <- plot(evaluation_cfvar, target = "GATES") +
@@ -87,7 +84,7 @@ loop_helper <- function(seeds, split, X=X, Y=Y, W=W, X_train=X_train,
 
     cf_gatevar_plots[[i]] <- cf_gatevar
 
-    cf_pval <- pvals(evaluation_cfvar, paste0("Seed=", seeds[i]), rownames)
+    cf_pval <- pvals(evaluation_cfvar, paste0("Seed=", seeds[i]))
     combined_pvals_list[[i]] <- cf_pval
   }
 
